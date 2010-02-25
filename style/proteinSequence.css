@@ -1,0 +1,29 @@
+/* CSS file */
+.toolBar{
+	paddingLeft:10;
+	paddingRight:10;
+	paddingTop:10;
+	paddingBottom:10;
+	borderStyle:solid;
+	borderColor:#484D53;
+	borderThickness:1;
+	cornerRadius:0;
+	backgroundColor:#A8A8A8;
+}
+.sequence{
+	fontFamily:"Courier New","_typewriter";
+	font-size:14px;
+	font-weight:normal;
+	leading: 10;
+	color:#33373B;
+	background-color:transparent;
+	borderStyle: none;
+}
+.details{
+	font-family: Arial,Verdana,sans-serif;
+   	font-size: 12px;
+   	color: #000000;
+	font-weight:normal;
+	background-color:#DADDDF;
+	borderStyle: none;
+}

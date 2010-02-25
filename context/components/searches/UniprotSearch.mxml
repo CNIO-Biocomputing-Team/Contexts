@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UniprotSearchClass xmlns="context.components.searches.*" xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" styleName="searchBox">
+    <mx:Label x="20" y="11" text="Protein Name/Accession number"    width="{this.width-40}" />
+	<mx:Label x="20" y="10" text="Protein Name/Accession number" styleName="labelShadow"   width="{this.width-40}" />
+	<mx:TextInput x="20" y="35" id="acc" styleName="textWhite"  width="400"  />
+	<mx:Label x="20" y="71" text="Sequence"   />
+	<mx:Label x="20" y="70" text="Sequence" styleName="labelShadow"  />
+	<mx:TextArea id="fasta" x="20" y="95" width="{this.width/2}" height="100" minWidth="0" minHeight="0" styleName="textWhite" />
+	<mx:Button id="search" label="SEARCH" x="20" y="205" width="150" height="26" styleName="blueButton" upSkin="@Embed('style/icons/buttonBgUp.png')" downSkin="@Embed('style/icons/buttonBg.png')" overSkin="@Embed('style/icons/buttonBg.png')" disabledSkin="@Embed('style/icons/buttonBg.png')" />
+</UniprotSearchClass>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProteinPathwaysClass xmlns="context.components.pathways.list.*" xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%">
+	<mx:DataGrid id="pathwaysListGrid" width="100%" height="100%">
+		<mx:columns>
+			<mx:DataGridColumn dataField="source" headerText="Pathway source"  width="150" />
+			<mx:DataGridColumn dataField="id" headerText="Pathway ID"  width="150" />
+		</mx:columns>
+	</mx:DataGrid>
+</ProteinPathwaysClass>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CompareClass xmlns="context.components.proteins.compare.*" xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%">
+	<mx:Label text="Protein Comparison" x="20" y="10" />
+	<mx:DataGrid id="compareProteinGrid" y="40" width="100%" height="100%" styleName="whiteGrid" variableRowHeight="true">
+		<mx:columns>
+			<mx:DataGridColumn dataField="feature" headerText="Feature"  width="150" />
+		</mx:columns>
+
+	</mx:DataGrid>
+</CompareClass>

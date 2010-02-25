@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PersonalNotesClass xmlns="context.components.proteins.notes.*" xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" minHeight="0" minWidth="0" styleName="noteBox">
+	<mx:Label text="Notes" x="20" y="20">
+		
+	</mx:Label>
+	<mx:Text id="noteText" width="{this.width-20}" height="{this.height-50}" x="20" y="50" minHeight="0" minWidth="0" />
+</PersonalNotesClass>

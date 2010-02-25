@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	layout="absolute" 
+	width="100%" 
+	height="100%" 
+	backgroundGradientAlphas="[1.0, 1.0]" 
+	backgroundGradientColors="[#FFFFFF, #FFFFFF]"
+ 	xmlns:ns1="flare.flex.*"
+ 	applicationComplete = "applicationComplete()"
+ >
+	<mx:Script>
+		<![CDATA[
+			import mx.core.Container;
+			import context.CancerResearch;
+	
+			public function applicationComplete():void
+			{
+				var cancerResearchContext:CancerResearch = new CancerResearch(mainPanel);
+ 				cancerResearchContext.initContext(); 
+			}
+		]]>
+    </mx:Script>
+    <mx:Style source="style/basic.css" />
+    <mx:Panel  x="0" y="0" width="840" height="795" layout="absolute" id="mainPanel" ></mx:Panel>
+</mx:Application>
+

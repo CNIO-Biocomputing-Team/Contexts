@@ -1,0 +1,531 @@
+global {
+    modalTransparencyBlur: 0;
+    modalTransparency: 0;
+    modalTransparencyColor: black;
+}
+Panel {
+	font-family: Arial,Verdana,sans-serif;
+    font-size: 12px;
+	color: #000000;
+   	font-weight:normal;
+   	borderStyle: solid;
+  	borderColor: #CCCCCC;
+   	borderThickness: 1;
+   	borderThicknessLeft: 1;
+   	borderThicknessRight: 1;
+   	cornerRadius: 0;
+   	headerHeight: 0;
+
+    dropShadowEnabled: false;
+}
+TitleWindow{
+	roundedBottomCorners: true;
+}
+MenuBar {
+   cornerRadius: 5;
+   letterSpacing: 0;
+   borderColor: #bdc1c5;
+   highlightAlphas: 1, 1;
+   fillAlphas: 0.89, 1;
+   fillColors: #ffffff, #ffffff;
+   color: #000000;
+   fontSize: 14px;
+   font-family: Arial,Helvetica,sans-serif;
+}
+Label {
+	font-family: Arial,Helvetica,Verdana,sans-serif;
+	font-size: 18px;
+	text-transform:uppercase;
+	color: #000000;
+}
+.labelShadow {
+	font-family: Arial,Helvetica,Verdana,sans-serif;
+	font-size: 18px;
+	text-transform:uppercase;
+	color: #FFFFFF;
+}
+.labelGray {
+	font-family: Arial,Helvetica,Verdana,sans-serif;
+	font-size: 14px;
+	font-weight:bold;
+	color: #CCCCCC;
+}
+.note{
+	font-family: Arial,Helvetica,Verdana,sans-serif;
+	font-size: 10px;
+	font-weight:normal;
+	color: #666666;
+}
+Text {
+   font-family: Arial,Verdana,sans-serif;
+   font-size: 13px;
+   color: #000000;
+   font-weight:normal;
+   textAlign:justify;
+}
+.textWhite {
+   backgroundColor:#FFFFFF;
+   borderColor:#484C4F;
+   color:#000000;	
+   font-family: Arial,Verdana,sans-serif;
+   font-size: 12px;
+   font-weight:normal;
+   borderThickness:1;
+   borderStyle:solid;
+   cornerRadius:5;
+   paddingTop:5px;
+   paddingLeft:5px;
+}
+.textDark {
+   backgroundColor:#575B61;
+   borderColor:#484C4F;
+   color:#FFFFFF;	
+   font-family: Arial,Verdana,sans-serif;
+   font-size: 12px;
+   font-weight:normal;
+   borderThickness:1;
+   borderStyle:solid;
+   cornerRadius:5;
+   paddingTop:5px;
+   paddingLeft:5px;
+}
+TextArea {
+   font-family: Arial,Verdana,sans-serif;
+   font-size: 12px;
+   color: #000000;	
+   font-weight:normal;
+   borderStyle:none;
+   borderColor:#FFFFFF;
+   borderThickness:0;
+   paddingLeft:20px;
+   paddingRight:20px;
+}
+.textAreaDark {
+   backgroundColor:#575B61;
+   borderColor:#484C4F;
+   color:#FFFFFF;
+   font-weight:normal;
+   borderStyle:solid;
+   borderThickness:1;
+   cornerRadius:5;
+   paddingTop:10px;
+   paddingLeft:10px;
+   paddingRight:10px;
+   paddingBottom:10px;
+	
+}
+TextInput {
+   fontSize: 12;
+   font-family: Arial,Verdana,sans-serif;
+   font-weight:normal;
+   color: #555555;	
+}
+Button {
+   paddingTop: 0;
+   paddingBottom: 0;
+   highlightAlphas: 0.74, 1;
+   fillColors: #ffffff, #fafbfc, #ffffff, #fafbfc;
+   textRollOverColor: #1295e6;
+   textSelectedColor: #1295e6;
+   borderColor: #ffffff;
+   themeColor: #1295e6;
+   font-size:14px;
+   color: #000000;
+   font-family: Arial,Verdana,sans-serif;
+   font-weight:normal;
+}
+.blueButton {
+   highlightAlphas: 0.12, 0.15;
+   fillAlphas: 1, 1, 1, 1;
+   fillColors: #355b86, #355b86, #4b7ca6, #4b7ca6;
+   color: #ffffff;
+   textRollOverColor: #ffffff;
+   textSelectedColor: #ffffff;
+   themeColor: #4b7ca6;
+   font-family: Arial,Verdana,sans-serif;
+   font-weight:normal;
+   borderColor: #ffffff;
+}
+PopUpButton {
+   highlightAlphas: 0.12, 0.15;
+   fillAlphas: 1, 1, 1, 1;
+   fillColors: #355b86, #355b86, #4b7ca6, #4b7ca6;
+   color: #ffffff;
+   textRollOverColor: #ffffff;
+   textSelectedColor: #ffffff;
+   themeColor: #4b7ca6;
+   font-family: Arial,Verdana,sans-serif;
+   font-weight:normal;
+   borderColor: #ffffff;
+}
+LinkButton {
+   cornerRadius: 10;
+   paddingRight: 9;
+   rollOverColor: #296190;
+   selectionColor: #296190;
+   color: #313358;
+   textRollOverColor: #313358;
+   textSelectedColor: #313358;
+   fontFamily: Helvetica,Arial;
+   fontSize: 14;
+   fontWeight: normal;
+   themeColor: #296190;
+}
+.contextLink{
+   cornerRadius: 0;
+   rollOverColor: #cccccc;
+   selectionColor: #cccccc;
+   fontWeight: normal;
+}
+DataGrid {
+   backgroundAlpha: 1;
+   backgroundColor: #60666e;
+   alternatingItemColors: #60666e, #575B61;
+   headerColors: #333333, #333333;
+   horizontalGridLines: false;
+   verticalGridLines: false;
+   verticalGridLineColor: #cccccc;
+   rollOverColor: #999999;
+   borderThickness: 0;
+   borderColor: #60666e;
+   selectionColor: #cccccc;
+   color: #cccccc;
+   dropShadowEnabled: false;
+   fontFamily: Arial;
+   fontSize: 14;   headerStyleName: "mydataGridHeaderStyle";
+}
+.mydataGridHeaderStyle {
+   font-family: Arial,Helvetica,Verdana,sans-serif;
+   font-size: 14px;
+   color: #cccccc;
+   fontStyle: normal;
+   textDecoration: none;
+}
+.whiteGrid {
+   backgroundAlpha: 1;
+   backgroundColor: #FFFFFF;
+   alternatingItemColors: #DFDFDF, #FFFFFF;
+   headerColors: #608BAE, #608BAE;
+   horizontalGridLines: false;
+   verticalGridLines: false;
+   verticalGridLineColor: #cccccc;
+   rollOverColor: #cccccc;
+   borderThickness: 0;
+   borderColor: #608BAE;
+   selectionColor: #cccccc;
+   color: #000000;
+   dropShadowEnabled: false;
+   fontFamily: Arial;
+   fontSize: 14;   headerStyleName: "whiteGridHeaderStyle";
+}
+.whiteGridHeaderStyle {
+   font-family: Arial,Helvetica,Verdana,sans-serif;
+   font-size: 14px;
+   color: #000000;
+   fontStyle: normal;
+   textDecoration: none;
+}
+CheckBoxList {
+   font-family: Arial,Helvetica,Verdana,sans-serif;
+   font-size: 14px;
+   color: #000000;
+   font-weight: normal;
+   text-indent:5px;
+}
+.checkBoxListLabel{
+   font-family: Arial,Helvetica,Verdana,sans-serif;
+   font-size: 14px;
+   color: #000000;
+   font-weight: normal;
+   text-indent:5px;
+}
+List {
+   font-family: Arial,Helvetica,Verdana,sans-serif;
+   font-size: 14px;
+   color: #000000;
+   font-weight: normal;
+   text-indent:5px;
+   
+}
+ProgressBar {
+   borderColor: #1295e6;
+   barColor: #1295e6;
+   trackHeight: 15;
+   verticalGap: 1;
+   fontSize: 12;
+}
+.tipCanvas{
+	borderStyle:solid;
+	borderColor:#A4B2BF;
+	borderThickness:2;
+	cornerRadius:10;
+	backgroundColor:#DFE8EC;
+}
+.tip {
+	font-family: Helvetica, Arial,Verdana,sans-serif;
+	font-size: 16px;
+	color: #6D747D;
+}
+.messageCanvas{
+	borderStyle:solid;
+	borderColor:#A4B2BF;
+	borderThickness:2;
+	cornerRadius:10;
+	backgroundColor:#DFE8EC;
+}
+.message {
+	font-family: Helvetica,Arial,Verdana,sans-serif;
+	font-size: 16px;
+	color: #6D747D;
+}
+.error {
+	font-family: Helvetica,Arial,Verdana,sans-serif;
+	font-size: 16px;
+	color: #FF0000;
+}
+
+/* Boxes */
+.leftBar{
+	paddingLeft:10;
+	paddingRight:10;
+	paddingTop:10;
+	paddingBottom:10;
+	fontSize:11;
+	color:#FFFFFF;
+	cornerRadius:0;
+	backgroundColor:#DFE8EC;
+}
+.historyBox{
+	paddingLeft:20;
+	paddingRight:10;
+	paddingTop:0;
+	paddingBottom:10;
+	fontSize:11;
+	color:#FFFFFF;
+	cornerRadius:0;
+	backgroundColor:#D4DDE5;
+}
+.leftBar1{
+	paddingLeft:10;
+	paddingRight:10;
+	paddingTop:10;
+	paddingBottom:10;
+	fontSize:11;
+	color:#FFFFFF;
+	cornerRadius:0;
+	backgroundColor:#DFE8EC;
+}
+.searchBox{
+	backgroundColor:#608BAE;
+}
+
+.listBox{
+	paddingLeft:0;
+	paddingRight:0;
+	paddingTop:0;
+	paddingBottom:0;
+	fontSize:11;
+	color:#FFFFFF;
+	borderStyle:solid;
+	borderColor:#484D53;
+	borderThickness:1;
+	cornerRadius:0;
+	backgroundColor:#60666E;
+}
+.workBox{
+	paddingLeft:10;
+	paddingRight:10;
+	paddingTop:10;
+	paddingBottom:10;
+	fontSize:11;
+	color:#000000;
+	borderStyle:none;
+	cornerRadius:0;
+	backgroundColor:#FFFFFF;
+}
+.whiteBox{
+	paddingLeft:10;
+	paddingRight:10;
+	paddingTop:10;
+	paddingBottom:10;
+	borderStyle:none;
+	cornerRadius:0;
+	backgroundColor:#FFFFFF;
+}
+.infoBox{
+	paddingLeft:5;
+	paddingRight:5;
+	paddingTop:5;
+	paddingBottom:5;
+	fontSize:11;
+	fontFamily:Verdana;
+	color:#555555;
+	borderStyle:solid;
+	borderColor:#F0F0F2;
+	borderThickness:1;
+	cornerRadius:5;
+	backgroundColor:#FFFFFF;
+}
+.grayBox{
+	backgroundColor:#474747;
+	borderStyle:solid;
+	borderColor:#B7BABC;
+	borderThickness:1;
+	paddingLeft:5;
+	paddingRight:5;
+	paddingTop:5;
+	paddingBottom:5;
+}
+.noteBox{
+	paddingLeft:5;
+	paddingRight:5;
+	paddingTop:5;
+	paddingBottom:5;
+	backgroundColor:#FDF7BB;
+	fontFamily:Arial;
+	fontSize:12px;
+}
+.darkBox{
+	paddingLeft:5;
+	paddingRight:5;
+	paddingTop:5;
+	paddingBottom:5;
+	backgroundColor:#474747;
+}
+.whiteText8{
+	fontSize:8;
+	fontFamily:Verdana;
+	color:#FFFFFF;
+}
+.blackText12{
+	fontSize:12;
+	fontFamily:Verdana;
+	color:#000000;
+}
+.blackText10{
+	fontSize:10;
+	fontFamily:Verdana;
+	color:#000000;
+}
+
+.subPanels {
+	font-family:Verdana,Arial;
+	font-size:11px;
+	paddingTop:10px;
+	paddingRight:10px;
+	paddingBottom:10px;
+	paddingLeft:10px;
+ }
+ .button {
+   cornerRadius: 5;
+   textIndent: 0;
+   letterSpacing: 0;
+   highlightAlphas: 0, 0;
+   fillAlphas: 1, 1, 1, 1;
+   fillColors: #86b501, #86b501, #86b501, #86b501;
+   color: #ffffff;
+   textRollOverColor: #ffffff;
+   textSelectedColor: #ffffff;
+   borderColor: #336633;
+   themeColor: #ffffff;
+   fontSize: 11;
+   font-weight: normal;
+}
+ /* CONTEXTS */
+ /* protein context */
+/* Annotations */
+.uniprotBox{
+	paddingLeft:5;
+	paddingRight:5;
+	paddingTop:5;
+	paddingBottom:5;
+	fontSize:11;
+	fontFamily:Verdana;
+	color:#555555;
+	borderStyle:solid;
+	borderColor:#FFFFFF;
+	borderThickness:1;
+	cornerRadius:5;
+	backgroundColor:#FFFFFF;
+}
+/* Sequence */
+.sequenceBox{
+	paddingLeft:5;
+	paddingRight:5;
+	paddingTop:5;
+	paddingBottom:5;
+	fontSize:11;
+	fontFamily:Verdana;
+	color:#555555;
+	borderStyle:solid;
+	borderColor:#FFFFFF;
+	borderThickness:1;
+	cornerRadius:5;
+	backgroundColor:#FFFFFF;		
+}
+.sequenceOptions{
+	paddingLeft:5;
+	paddingRight:5;
+	paddingTop:5;
+	paddingBottom:5;	
+}
+.rawSequence{
+	fontSize:12;
+	fontFamily:"Courier New";
+	color: #FFFFFF;
+	font-weight:bold;
+}
+/* interactions */
+.interactionsBox{
+	paddingLeft:5;
+	paddingRight:5;
+	paddingTop:5;
+	paddingBottom:5;
+	color:#555555;
+	borderStyle:solid;
+	borderColor:#E4E4E4;
+	borderThickness:1;
+	cornerRadius:5;
+	backgroundColor:#E4E4E4;
+}
+.detailsBox{
+	paddingLeft:10;
+	paddingRight:10;
+	paddingTop:10;
+	paddingBottom:10;
+	color:#555555;
+	borderStyle:solid;
+	borderColor:#FFFFFF;
+	borderThickness:1;
+	cornerRadius:5;
+	backgroundColor:#FFFFFF;
+}
+.ihopBox {
+	paddingLeft:5;
+	paddingRight:5;
+	paddingTop:5;
+	paddingBottom:5;
+	color:#555555;
+	borderStyle:solid;
+	borderColor:#E8E9EB;
+	borderThickness:1;
+	cornerRadius:5;
+	backgroundColor:#FFFFFF;
+}	
+/* sequence context */
+.similarityBox{
+	paddingLeft:5;
+	paddingRight:5;
+	paddingTop:5;  
+	paddingBottom:5;
+ 	borderStyle:solid;
+	borderColor:#FFFFFF;
+	borderThickness:1;
+	cornerRadius:5; 
+	backgroundColor:#FFFFFF;			
+}
+.loading{
+	color:#FF0000;
+	fontSize:14;
+	fontWeight:bold;
+}

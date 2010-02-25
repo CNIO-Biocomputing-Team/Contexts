@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PartRegistrySearchClass xmlns="context.components.searches.*" xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100" styleName="searchBox">
+	<mx:Label x="20" y="11" text="Search Parts Registry by part name"   />
+	<mx:Label x="20" y="10" text="Search Parts Registry by part name" styleName="labelShadow"  />
+	<mx:TextInput id="part" x="20" y="40" styleName="textWhite"  width="400" />
+	<mx:Button id="search" label="SEARCH" x="440" y="40" width="150" height="26" styleName="blueButton" upSkin="@Embed('style/icons/buttonBgUp.png')" downSkin="@Embed('style/icons/buttonBg.png')" overSkin="@Embed('style/icons/buttonBg.png')" disabledSkin="@Embed('style/icons/buttonBg.png')" />
+</PartRegistrySearchClass>

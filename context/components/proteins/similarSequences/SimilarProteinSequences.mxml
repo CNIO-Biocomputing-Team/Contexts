@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SimilarProteinSequencesClass xmlns="context.components.proteins.similarSequences.*" xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%">
+	<mx:DataGrid id="proteinListGrid" width="100%" height="100%">
+		<mx:columns>
+			<mx:DataGridColumn dataField="uniprotId" headerText="UniProtID"  width="150" />
+			<mx:DataGridColumn dataField="description" headerText="Gene"  width="150" />
+			<mx:DataGridColumn dataField="taxonomy" headerText="Taxonomy" />
+			<mx:DataGridColumn dataField="length" headerText="Length" />
+			<mx:DataGridColumn dataField="identity" headerText="Identity" />
+			<mx:DataGridColumn dataField="score" headerText="Score" />
+			<mx:DataGridColumn dataField="expectation" headerText="Expectation" />
+		</mx:columns>
+	</mx:DataGrid>
+</SimilarProteinSequencesClass>

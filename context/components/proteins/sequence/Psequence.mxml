@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PsequenceClass xmlns="context.components.proteins.sequence.*" xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%">
+	<mx:Label id="proteinLabel" text="" x="20" y="20" />
+	<mx:SWFLoader x="{proteinLabel.width+40}" y="20" source="style/icons/loader.swf" id="sequenceLoader" visible="false" />
+	<mx:Text id="sequenceText" width="{this.width-40}" height="{this.height-100}" x="20" y="50" minHeight="0" minWidth="0" />
+	<mx:HBox x="20" y="{this.height-90}"  width="{this.width-40}" height="40">
+		<mx:Label text="Highlight:" />
+		<mx:PopUpButton  creationComplete="initDomainMenu();" id="domains" label="Similarity" width="150" height="26" styleName="blueButton"  />
+		<mx:PopUpButton  creationComplete="initVariantMenu();" id="variants" label="Variants" width="150" height="26" styleName="blueButton"  />
+		<mx:PopUpButton  creationComplete="initFunctionalMenu();" id="functional" label="Functional Residues" width="180" height="26" styleName="blueButton"  />
+	</mx:HBox>
+</PsequenceClass>

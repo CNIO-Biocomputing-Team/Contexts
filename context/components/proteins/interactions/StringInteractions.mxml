@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<StringInteractionsClass xmlns="context.components.proteins.interactions.*" xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%">
+	<mx:Label id="proteinLabel" text="" x="20" y="20" />
+	<mx:SWFLoader x="{proteinLabel.width+40}" y="20" source="style/icons/loader.swf" id="interactionLoader" visible="false" />
+	<mx:Box id="interactionsBox" width="300" height="300" x="20" y="40" />
+	<mx:Label id="note" text="Click a node to get information about the protein" x="60" y="350"  styleName="note"  visible="false"/>
+	<mx:VBox id="detailsBox" width="{this.width-390}" x="350" y="80">
+	</mx:VBox>
+</StringInteractionsClass>
+	

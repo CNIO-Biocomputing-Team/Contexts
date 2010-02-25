@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<custom:CancerMutationsClass 
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:degrafa="http://www.degrafa.com/2007"
+	xmlns:custom = "context.*"   
+ 	xmlns:ns1="flare.flex.*"
+ 	xmlns:coverflow="com.dougmccune.coverflow.*"
+	xmlns:containers="com.dougmccune.containers.*"
+	xmlns:list="context.components.proteins.list.*"
+	xmlns:sequence="context.components.proteins.sequence.*"	
+	layout="absolute" 
+	width="100%" 
+	height="100%"
+	x="0"
+	y="0"
+	resizeEffect="{resize}" 
+ >
+    <mx:Style source="style/basic.css" />
+    <mx:Style source="style/proteinSequence.css" />
+    <mx:Resize id="resize" />
+    <mx:Panel  x="0" y="0" width="100%" height="100%" layout="absolute" id="applicationPanel" >
+     
+    	<!--Left Bar -->
+		<mx:Canvas id="leftBar" x="0" y="50" width="200" height="30%" styleName="leftBar">
+    		<!--Searches-->
+    		
+    		<!--UniProt-->
+    		<mx:Button x="30" y="50"  upSkin="@Embed('style/icons/uniprot.png')"  downSkin="@Embed('style/icons/uniprot-hover.png')" overSkin="@Embed('style/icons/uniprot-hover.png')" disabledSkin="@Embed('style/icons/uniprot.png')" click="this.SearchUniprotTab.render()"  />
+       
+       		<!--PartsResgistry-->
+     		<mx:Button x="30" y="87"  upSkin="@Embed('style/icons/registry.png')"  downSkin="@Embed('style/icons/registry-hover.png')" overSkin="@Embed('style/icons/registry-hover.png')" disabledSkin="@Embed('style/icons/registry.png')" click="this.SearchPartsRegistryTab.render()"  />
+       	
+       	</mx:Canvas>
+       	
+       	<!--History-->
+    	<mx:VBox id="historyHEader" x="0" y="{leftBar.height+50}" width="200" height="50" styleName="historyBox" minHeight="0">
+    	</mx:VBox>
+    	<mx:VBox id="historyBox" x="0" y="{leftBar.height+100}" width="200" height="30%" styleName="historyBox" verticalScrollPolicy="auto" minHeight="0">
+    	</mx:VBox>
+    	
+    	<!--Left Bar 1-->
+    	<mx:Canvas id="leftBar1" x="0" y="{historyBox.y+historyBox.height}" width="200" height="40%" styleName="leftBar1">
+       		<mx:LinkButton x="30" y="45" label="Targets" />
+    	</mx:Canvas>
+    	
+    	<!--List Box-->
+    	<mx:Canvas id="listBox" x="200" y="50" width="100%" height="35%" styleName="listBox">
+    		<list:ProteinList parentContext="{this}">
+    			
+    		</list:ProteinList>
+    	</mx:Canvas>
+
+    	<!--Work Box-->
+    	<mx:Canvas id="workBox" x="200" y="{listBox.y+listBox.height}" width="100%" height="65%" styleName="workBox">
+    	</mx:Canvas>
+		
+		<degrafa:Surface>
+	    	<degrafa:GeometryGroup>
+	    		<degrafa:RegularRectangle height="50" id="headerBar" width="100%" x="0" y="0">
+					<degrafa:fill>
+						<degrafa:LinearGradientFill angle="90" spreadMethod="reflect">
+							<degrafa:GradientStop alpha="1" color="#E8EAEC" ratio="0"/>
+							<degrafa:GradientStop alpha="1" color="#D7DADD" ratio="0.60"/>
+						</degrafa:LinearGradientFill>
+					</degrafa:fill>
+				</degrafa:RegularRectangle>
+				<degrafa:VerticalLine id="VerticalSeparator" x="200" y="50" y1="{leftBar1.y+leftBar1.height}">
+					<degrafa:stroke>
+						<degrafa:SolidStroke alpha="1" caps="round" color="#484D53" joints="round" weight="1"/>
+					</degrafa:stroke>
+				</degrafa:VerticalLine>
+				<!--Search Text-->
+				<degrafa:RasterText fontFamily="Lucida Grande,Arial,Verdana,sans-serif" fontSize="13" fontWeight="bold" id="SearchShadow" italic="false" text="SEARCH"  wordWrap="false" x="20" y="71" height="18">
+					<degrafa:fill>
+						<degrafa:SolidFill alpha="1" color="#FFFFFF" id="SolidFill55483"/>
+					</degrafa:fill>
+				</degrafa:RasterText>
+				<degrafa:RasterText fontFamily="Lucida Grande,Arial,Verdana,sans-serif" fontSize="13" fontWeight="bold" id="Search" italic="false" text="SEARCH"  wordWrap="false" x="20" y="70" height="18" >
+					<degrafa:fill>
+						<degrafa:SolidFill alpha="1" color="#808B98" id="SolidFill5548"/>
+					</degrafa:fill>
+				</degrafa:RasterText>
+				<!--History Text-->
+				<degrafa:RasterText fontFamily="Lucida Grande,Arial,Verdana,sans-serif" fontSize="13" fontWeight="bold" id="SearchHistoryShadow" italic="false" text="SEARCH HISTORY"  wordWrap="false" x="20" y="{leftBar.height+71}" width="150" height="18">
+					<degrafa:fill>
+						<degrafa:SolidFill alpha="1" color="#FFFFFF" id="SolidFillf55483"/>
+					</degrafa:fill>
+				</degrafa:RasterText>
+				<degrafa:RasterText fontFamily="Lucida Grande,Arial,Verdana,sans-serif" fontSize="13" fontWeight="bold" id="SearchHistory" italic="false" text="SEARCH HISTORY"  wordWrap="false" x="20" y="{leftBar.height+70}" width="150" height="18" >
+					<degrafa:fill>
+						<degrafa:SolidFill alpha="1" color="#808B98" id="SolidFilrl5548"/>
+					</degrafa:fill>
+				</degrafa:RasterText>
+				<!--List Text-->
+				<degrafa:RasterText fontFamily="Lucida Grande,Arial,Verdana,sans-serif" fontSize="13" fontWeight="bold" id="ListShadow" italic="false" text="MY LISTS"  wordWrap="false" x="20" y="{leftBar1.y+21}" height="18">
+					<degrafa:fill>
+						<degrafa:SolidFill alpha="1" color="#FFFFFF" id="SolidFill554834"/>
+					</degrafa:fill>
+				</degrafa:RasterText>
+				<degrafa:RasterText fontFamily="Lucida Grande,Arial,Verdana,sans-serif" fontSize="13" fontWeight="bold" id="List" italic="false" text="MY LISTS"  wordWrap="false" x="20" y="{leftBar1.y+20}" height="18" >
+					<degrafa:fill>
+						<degrafa:SolidFill alpha="1" color="#808B98" id="SolidFill55484"/>
+					</degrafa:fill>
+				</degrafa:RasterText>
+	    	</degrafa:GeometryGroup>
+	    </degrafa:Surface>
+	    <!--Logo-->
+	    <mx:Image source="style/icons/logo50.png" x="10" y="5" />
+		<!--Menu Bar-->
+	   	<mx:MenuBar id="menuBar" labelField="@label" change="menuTrigger(event)" x="205" y="5" height="40">
+    	</mx:MenuBar>
+    	
+    	<!--Loading-->
+    	<mx:Text id="loadingLabel" text="Loading..." x="{this.width-130}" y="0" width="70" height="20"  styleName="loading" visible="true"/>
+    </mx:Panel>
+</custom:CancerMutationsClass>

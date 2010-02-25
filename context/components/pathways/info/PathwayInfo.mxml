@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PathwayInfoClass xmlns="context.components.pathways.info.*" xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%">
+	<mx:Image id="pathwayMap" visible="false" />
+</PathwayInfoClass>

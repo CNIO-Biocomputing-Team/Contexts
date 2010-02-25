@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArticleListClass xmlns="context.components.literature.list.*" xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" xmlns:ui="flash.ui.*">
+		<mx:DataGrid id="ArticleListGrid" width="100%" height="100%">
+		<mx:columns>
+			<mx:DataGridColumn dataField="pmid" headerText="PubMed ID"  width="40" />
+			<mx:DataGridColumn dataField="title" headerText="Title"  width="200" />
+			<mx:DataGridColumn dataField="journal" headerText="Journal"  width="100" />
+			<mx:DataGridColumn dataField="year" headerText="Year"  width="50" />
+			<mx:DataGridColumn dataField="abstract" headerText="Abstract"  width="50"  visible="false"/>
+		</mx:columns>
+	</mx:DataGrid>
+</ArticleListClass>

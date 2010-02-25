@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ArticleInfoClass xmlns="context.components.literature.info.*" xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%">
+	<mx:Label id="titleLabel" text="" x="20" y="20" width="{this.width-40}" />
+	<mx:Text id="infoText" width="{this.width-40}" height="{this.height-100}" x="20" y="50" minHeight="0" minWidth="0"  link="textLink(event);"/>
+	<mx:HBox x="20" y="{this.height-90}"  width="{this.width-40}" height="40">
+		<mx:Label text="Highlight:" />
+		<mx:Button id="organismsButton" label="Organisms" width="150" height="26" styleName="blueButton" />
+		<mx:Button id="proteinsButton" label="Proteins" width="150" height="26" styleName="blueButton" />
+		<!--<mx:Button id="proteinInteractionsButton" label="Protein Interactions" width="150" height="26" styleName="blueButton" />-->
+		<mx:Button id="diseasesButton" label="Diseases" width="150" height="26" styleName="blueButton" />
+	</mx:HBox>
+</ArticleInfoClass>

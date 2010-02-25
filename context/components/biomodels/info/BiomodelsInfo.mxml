@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BiomodelsInfoClass xmlns="context.components.biomodels.info.*" xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%">
+	<mx:VBox x="20" y="20" width="{this.width-20}" height="{this.height-40}">
+		<mx:Label text="Compartments" />
+		<mx:Text  id="compartment" width="{this.width-60}"  />
+		<mx:Label text="Species" />
+		<mx:Text   id="species" width="{this.width-60}"  />
+		<mx:Label text="Parameters" />
+		<mx:Text   id="parameter" width="{this.width-60}"  />
+		<mx:Label text="Initial Assignments" />
+		<mx:Text   id="initialassignment" width="{this.width-60}"   />
+		<mx:Label text="Rules" />
+		<mx:Text  id="rule" width="{this.width-60}"  />
+		<mx:Label text="Constraints" />
+		<mx:Text   id="constraint" width="{this.width-60}"  />
+		<mx:Label text="Reactions" />
+		<mx:Text  id="reaction" width="{this.width-60}"  />
+		<mx:Label text="Events" />
+		<mx:Text  id="event" width="{this.width-60}"  />
+	</mx:VBox>
+</BiomodelsInfoClass>

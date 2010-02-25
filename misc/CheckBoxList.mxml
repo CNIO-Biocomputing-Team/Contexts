@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Licensed under the Creative Commons License, Version 3.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+     http://creativecommons.org/licenses/by-sa/3.0/us/
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+
+     Created By Russell Brown : EmpireGP Servces
+     http://www.EmpireGPServices.com
+-->
+
+<mx:List xmlns:mx="http://www.adobe.com/2006/mxml"
+	    creationComplete="onCreationComplete();" 
+	    itemRenderer="misc.ItemRenderer"
+>
+	<mx:Script>
+        <![CDATA[
+        	import mx.events.ListEvent;
+            private function onCreationComplete():void {
+                 this.addEventListener("ItemChecked", onItemChecked);
+                 this.addEventListener("ItemUnchecked", onItemUnchecked);
+            }
+
+             private function onItemChecked(event:ListItemEvent):void {
+                 event.stopPropagation();
+                this.selectedItems = this.selectedItems.concat([event.targetItem]);
+                this.dispatchEvent(new Event(Event.CHANGE));
+            }
+
+             private function onItemUnchecked(event:ListItemEvent):void {
+                 event.stopPropagation();
+
+                var pos:int = this.selectedItems.indexOf(event.targetItem);
+
+                this.selectedItems = this.selectedItems.filter(
+                    function (item:*, index:int, array:Array):Boolean {
+                        return item != this.targetItem;
+                    },
+                    event
+                );
+
+                this.dispatchEvent(new Event(Event.CHANGE));
+            }
+
+            override protected function mouseUpHandler(event:MouseEvent):void {}
+            override protected function mouseDownHandler(event:MouseEvent):void {}
+            override protected function focusInHandler(event:FocusEvent):void {}
+        ]]>
+    </mx:Script>
+
+</mx:List>

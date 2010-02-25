@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DatabaseAnnotationsClass  xmlns="context.components.proteins.annotations.*" xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" minHeight="0" minWidth="0">
+	<mx:Label text="Protein Annotations" x="20" y="20" />
+	<mx:SWFLoader x="200" y="20" source="style/icons/loader.swf" id="annotationsLoader" visible="false" />
+	<mx:Canvas id="annotationCanvas" verticalScrollPolicy="auto" width="{this.width}" height="{this.height-70}" x="0" y="50" minHeight="0" minWidth="0">
+		<mx:Text id="annotationText"  width="{annotationCanvas.width-40}"  x="20" y="0"  minWidth="0" link="textLink(event);" />
+	</mx:Canvas>
+</DatabaseAnnotationsClass>

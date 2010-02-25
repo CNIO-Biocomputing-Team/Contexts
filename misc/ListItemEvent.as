@@ -1,0 +1,36 @@
+/*
+     Licensed under the Creative Commons License, Version 3.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+     http://creativecommons.org/licenses/by-sa/3.0/us/
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+
+     Created By Russell Brown : EmpireGP Servces
+     http://www.EmpireGPServices.com
+*/
+
+package misc{
+	
+	import flash.events.Event;
+
+	public class ListItemEvent extends Event {
+		private var _targetItem:Object;
+
+		public function ListItemEvent(type:String, targetItem:Object, bubbles:Boolean=false, cancelable:Boolean=false) {
+			this._targetItem = targetItem;
+			
+			super(type, bubbles, cancelable);
+		}
+
+		public function get targetItem():Object {
+			return this._targetItem
+		}
+
+	}
+}
